@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.iiit.a3_mt17005.MainActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#e9f9fb">
+
+                <Switch
+                    android:id="@+id/switch0"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:checked="false"
+                    android:text="Start/Stop"
+                    android:layout_marginLeft="30px"
+                    android:textSize="18sp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100px"
+                    android:textAlignment="center"
+                    android:text="@string/export_to_csv"
+                    android:id="@+id/exportBtn"
+                    android:onClick="exportOnClickListener"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="80dp"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/accelerometer"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:paddingLeft="20px"
+                    android:background="#F5F5F5"/>
+
+                <TextView
+                    android:id="@+id/x_value"
+                    android:layout_width="180dp"
+                    android:layout_height="80dp"
+                    android:gravity="center_vertical|left"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="80dp"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/gyroscope"
+                    android:textSize="18sp"
+                    android:paddingLeft="20px"
+                    android:textStyle="bold"
+                    android:background="#F5F5F5"/>
+
+                <TextView
+                    android:id="@+id/x_value_g"
+                    android:layout_width="180dp"
+                    android:layout_height="80dp"
+                    android:gravity="center_vertical|left"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="80dp"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/gps"
+                    android:textSize="18sp"
+                    android:paddingLeft="20px"
+                    android:textStyle="bold"
+                    android:background="#F5F5F5" />
+
+                <TextView
+                    android:id="@+id/x_value_gps"
+                    android:layout_width="180dp"
+                    android:layout_height="80dp"
+                    android:gravity="center_vertical|left"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="80dp"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/network_cell_tower"
+                    android:textSize="18sp"
+                    android:paddingLeft="20px"
+                    android:textStyle="bold"
+                    android:background="#F5F5F5"/>
+
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="180dp"
+                    android:layout_height="80dp">
+
+                    <TextView
+                        android:id="@+id/tower"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|left"
+                        android:textSize="16sp" />
+                </android.support.v4.widget.NestedScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/wifi_access_point"
+                    android:paddingLeft="20px"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:background="#F5F5F5"/>
+
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="180dp"
+                    android:layout_height="80dp">
+
+                    <TextView
+                        android:id="@+id/wifi"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textSize="16sp" />
+                </android.support.v4.widget.NestedScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="80dp"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/microphone"
+                    android:textSize="18sp"
+                    android:paddingLeft="20px"
+                    android:textStyle="bold"
+                    android:background="#F5F5F5" />
+
+                <TextView
+                    android:id="@+id/micro"
+                    android:layout_width="180dp"
+                    android:layout_height="80dp"
+                    android:gravity="center_vertical"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.constraint.ConstraintLayout>
